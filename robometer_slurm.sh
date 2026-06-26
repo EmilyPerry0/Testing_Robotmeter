@@ -14,6 +14,8 @@ module load Python/3.13.5-GCCcore-14.3.0
 
 # setup
 pip install uv
+pip install -U "huggingface_hub"
+export HF_TOKEN=$(cat ~/.hf_token)
 
 # move to scratch 
 cd $TMPDIR
@@ -26,7 +28,7 @@ uv sync
 
 hf auth
 export dataset_dir="processed_datasets"
-mkdir processed_datasets
+mkdir $dataset_dir
 export ROBOMETER_PROCESSED_DATASETS_PATH=$TMPDIR/$dataset_dir
 ./scripts/download_processed_datasets.sh
 ./scripts/untar_processed_datasets.sh
