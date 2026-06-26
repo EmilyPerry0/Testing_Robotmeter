@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -J test_robometer
-#SBATCH -t 10:00
+#SBATCH -t 20:00
 #SBATCH --partition=gpu_a100
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
@@ -26,7 +26,7 @@ cd robometer
 # Create venv and install
 uv sync
 
-hf auth
+hf auth login
 export dataset_dir="processed_datasets"
 mkdir $dataset_dir
 export ROBOMETER_PROCESSED_DATASETS_PATH=$TMPDIR/robometer/$dataset_dir
