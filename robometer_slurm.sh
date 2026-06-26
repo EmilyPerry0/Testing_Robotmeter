@@ -29,7 +29,7 @@ uv sync
 hf auth
 export dataset_dir="processed_datasets"
 mkdir $dataset_dir
-export ROBOMETER_PROCESSED_DATASETS_PATH=$TMPDIR/$dataset_dir
+export ROBOMETER_PROCESSED_DATASETS_PATH=$TMPDIR/robometer/$dataset_dir
 ./scripts/download_processed_datasets.sh
 ./scripts/untar_processed_datasets.sh
 
