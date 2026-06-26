@@ -10,7 +10,7 @@
 
 module load 2025
 module load CUDA/12.9.1
-Python/3.13.5-GCCcore-14.3.0
+module load Python/3.13.5-GCCcore-14.3.0
 
 # setup
 pip install uv
@@ -18,7 +18,7 @@ pip install uv
 # move to scratch 
 cd $TMPDIR
 
-git clone https://github.com/aliang8/robometer.git
+git clone https://github.com/robometer/robometer.git
 cd robometer
 
 # Create venv and install
