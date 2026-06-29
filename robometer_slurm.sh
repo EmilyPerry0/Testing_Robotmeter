@@ -26,13 +26,6 @@ cd robometer
 # Create venv and install
 uv sync
 
-hf auth login
-export dataset_dir="processed_datasets"
-mkdir $dataset_dir
-export ROBOMETER_PROCESSED_DATASETS_PATH=$TMPDIR/robometer/$dataset_dir
-./scripts/download_processed_datasets.sh
-./scripts/untar_processed_datasets.sh
-
 # actually run the thing
 uv run python scripts/example_inference_local.py \
   --model-path robometer/Robometer-4B \
