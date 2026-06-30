@@ -15,11 +15,16 @@ module load FFmpeg/7.1.1-GCCcore-14.2.0
 # move to robometer dr 
 cd $HOME/robometer_setup/robometer
 
+uv sync --extra robometer
+
+# test
+uv run python -c "from transformers import Qwen3VLModel; print(Qwen3VLModel)"
+
 # actually run the thing
-uv run python scripts/example_inference_local.py \
-  --model-path robometer/Robometer-4B \
-  --video scripts/example_videos/soar_put_green_stick_in_brown_bowl.mp4 \
-  --task "put green stick in brown bowl"
+# uv run python scripts/example_inference_local.py \
+#   --model-path robometer/Robometer-4B \
+#   --video scripts/example_videos/soar_put_green_stick_in_brown_bowl.mp4 \
+#   --task "put green stick in brown bowl"
 
 
 # # setup the output
