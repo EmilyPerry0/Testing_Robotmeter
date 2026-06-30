@@ -9,7 +9,7 @@
 #SBATCH --output=%x_%j.log
 
 module load 2025
-module load CUDA/12.9.1
+# module load CUDA/12.9.1
 module load FFmpeg/7.1.1-GCCcore-14.2.0
 
 # move to robometer dr 
