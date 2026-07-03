@@ -1,4 +1,4 @@
-#!/bin.bash
+#!/bin/bash
 
 cd $HOME
 git clone https://github.com/robometer/robometer.git
