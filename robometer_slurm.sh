@@ -18,4 +18,4 @@ cd $HOME/robometer
 uv run python scripts/example_inference_local.py \
   --video scripts/example_videos/soar_put_green_stick_in_brown_bowl.mp4 \
   --model-path ./models/ \
-  --task "put green stick in brown bowl"
+  --task "put green stick inside brown bowl"
