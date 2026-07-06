@@ -16,5 +16,6 @@ cd $HOME/robometer
 
 # actually run the thing
 uv run python robometer/evals/eval_server.py \
+    model_path=robometer/Robometer-4B \
     server_url=127.0.0.1 \
     server_port=5000
