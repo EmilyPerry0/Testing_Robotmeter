@@ -17,5 +17,6 @@ cd $HOME/robometer
 # actually run the thing
 uv run python scripts/example_inference_local.py \
   --video scripts/example_videos/soar_put_green_stick_in_brown_bowl.mp4 \
+  --model-path robometer/Robometer-4B \
   --task "pick up green stick and put green stick in brown bowl" \
   --fps 5
